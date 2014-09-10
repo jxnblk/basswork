@@ -9,13 +9,17 @@
     "rework-calc": "^1.1.0",
     "gulp-minify-css": "^0.3.8",
     "rework-math": "^1.0.1",
-    "rework-custom-media": "^0.2.0"
+    "rework-custom-media": "^0.2.0",
+    "gulp-browserify": "^0.5.0"
   },
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
     "basscss-base": "latest",
     "basscss-utilities": "latest",
-    "basscss-grid": "latest"
+    "basscss-grid": "latest",
+    "bumpkit": "latest",
+    "geomicons-open": "latest",
+    "basscss-table-object": "latest"
   }
 }

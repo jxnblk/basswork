@@ -12,6 +12,8 @@ var rmedia = require('rework-custom-media');
 // autoprefixer
 // color functions
 
+var browserify = require('gulp-browserify');
+
 gulp.task('default', function() {
   gulp.src('./src/index.css')
     .pipe(rework( rimport(), rmedia(), rvars(), rcalc ))
@@ -22,3 +24,8 @@ gulp.task('default', function() {
     .pipe(gulp.dest('./assets'));
 });
 
+gulp.task('js', function() {
+  gulp.src('src/app.js')
+    .pipe(browserify())
+    .pipe(gulp.dest('./assets'));
+});
