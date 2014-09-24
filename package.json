@@ -1,27 +1,14 @@
 {
   "name": "basswork",
-  "version": "0.0.1",
-  "devDependencies": {
-    "gulp": "~3.8.8",
-    "gulp-browserify": "^0.5.0",
-    "gulp-minify-css": "^0.3.8",
-    "gulp-rename": "^1.2.0",
-    "gulp-rework": "^1.0.2",
-    "rework-calc": "^1.1.0",
-    "rework-custom-media": "^0.2.0",
-    "rework-math": "^1.0.1",
-    "rework-npm": "^1.0.0",
-    "rework-vars": "^3.1.1"
-  },
+  "version": "0.0.2",
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "basscss-base": "latest",
-    "basscss-grid": "latest",
-    "basscss-table-object": "latest",
-    "basscss-utilities": "latest",
-    "bumpkit": "latest",
-    "geomicons-open": "latest",
-    "please-hold": "0.0.1"
+    "rework": "^1.0.1",
+    "rework-npm": "^1.0.0",
+    "rework-custom-media": "^0.2.0",
+    "rework-vars": "^3.1.1",
+    "rework-calc": "^1.1.0",
+    "rework-plugin-colors": "^1.0.3"
   }
 }

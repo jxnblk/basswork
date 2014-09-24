@@ -1,4 +1,6 @@
-# Basscss Pro
+# Basswork
 
-Test repo for using Rework precompiler.
+Rework wrapper for use with Basscss
+
+http://basscss.com
 
