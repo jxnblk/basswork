@@ -22,9 +22,8 @@ var autoprefixer = require('autoprefixer');
 module.exports = function(src, options) {
 
   var options = options || {};
-  var source = options.source || null;
 
-  var css = rework(src, { source: source })
+  var css = rework(src, options)
     .use(reworkNPM())
     .use(reworkVars())
     .use(reworkMedia())
