@@ -26,7 +26,7 @@ if (!filename) docExit([
 ].concat(usage), 1);
 
 // get full path to input css file
-var path = __dirname + '/' + filename;
+var path = process.cwd() + '/' + filename;
 
 // exit with error if input file doesn't exist
 if (!fs.existsSync(path)) docExit([
