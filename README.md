@@ -18,7 +18,7 @@ npm install basswork
 ## Usage
 Pass an unprocessed CSS string to Basswork, which will return the processed CSS.
 
-```
+```javascript
 var basswork = require('basswork');
 var fs = require('fs');
 
@@ -29,6 +29,6 @@ fs.writeFileSync('./css/base.css', css);
 
 Or from the command line:
 
-```
- $ basswork --sourcemap in.css > out.css
+```sh
+$ basswork --sourcemap in.css > out.css
 ```
