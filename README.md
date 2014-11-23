@@ -30,9 +30,5 @@ fs.writeFileSync('./css/base.css', css);
 Or from the command line:
 
 ```
- $ basswork --sourcemap example.css
-.color-goldenrod {
-  color: goldenrod;
-}
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9u... etc */
+ $ basswork --sourcemap in.css > out.css
 ```
