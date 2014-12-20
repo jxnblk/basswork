@@ -1,8 +1,8 @@
 # Basswork
 
-Rework wrapper for use with [Basscss](http://basscss.com)
+CSS preprocessor for [Basscss](http://basscss.com) built with Rework
 
-## Rework Plugins Used:
+## Rework Plugins Included:
 - Rework NPM
 - Rework Custom Media
 - Rework Vars
@@ -16,6 +16,9 @@ npm install basswork
 ```
 
 ## Usage
+
+### Node
+
 Pass an unprocessed CSS string to Basswork, which will return the processed CSS.
 
 ```javascript
@@ -27,8 +30,15 @@ var css = basswork(src);
 fs.writeFileSync('./css/base.css', css);
 ```
 
-Or from the command line:
+### Command Line
 
 ```sh
-$ basswork --sourcemap in.css > out.css
+$ basswork in.css out.css
 ```
+
+```sh
+$ basswork --sourcemap in.css out.css
+```
+
+MIT License
+

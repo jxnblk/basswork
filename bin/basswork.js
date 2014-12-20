@@ -1,7 +1,8 @@
 #!/usr/bin/env node
+
 var minimist = require('minimist');
 var fs = require('fs');
-var basswork = require('./');
+var basswork = require('..');
 
 var usage = [
   "usage: basswork [--sourcemap] <filename>",
@@ -25,22 +26,30 @@ if (!filename) docExit([
   "error: no input file provided"
 ].concat(usage), 1);
 
+var outputFile = args._[1];
+//console.log(outputFile);
+
 // get full path to input css file
-var path = process.cwd() + '/' + filename;
+var filepath = process.cwd() + '/' + filename;
 
 // exit with error if input file doesn't exist
-if (!fs.existsSync(path)) docExit([
-  "error: "+path+" doesn't exist"
+if (!fs.existsSync(filepath)) docExit([
+  "error: " + filepath + " doesn't exist"
 ].concat(usage), 1);
 
-var sourceCSS = fs.readFileSync(path, 'utf8');
+var sourceCSS = fs.readFileSync(filepath, 'utf8');
 
 // render css
 var css = basswork(
   sourceCSS,
-  { source: path },
+  { source: filepath },
   { sourcemap: args.sourcemap }
 );
 
 // write out css
-console.log(css);
+if (outputFile) {
+  fs.writeFileSync(outputFile, css);
+} else {
+  console.log(css);
+}
+

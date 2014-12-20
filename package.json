@@ -4,7 +4,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "bin": {
-    "basswork": "cli.js"
+    "basswork": "bin/basswork.js"
   },
   "dependencies": {
     "autoprefixer": "^3.1.0",
