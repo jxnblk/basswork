@@ -19,9 +19,10 @@ var reworkVars = require('rework-vars');
 var reworkColors = require('rework-plugin-colors');
 var autoprefixer = require('autoprefixer');
 
-module.exports = function(src, options) {
+module.exports = function(src, options, toStringOptions) {
 
   var options = options || {};
+  var toStringOptions = toStringOptions || {};
 
   var css = rework(src, options)
     .use(reworkNPM())
@@ -29,7 +30,7 @@ module.exports = function(src, options) {
     .use(reworkMedia())
     .use(reworkCalc)
     .use(reworkColors())
-    .toString();
+    .toString(toStringOptions);
 
   css = autoprefixer().process(css).css;
 

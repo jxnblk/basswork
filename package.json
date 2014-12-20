@@ -1,16 +1,20 @@
 {
   "name": "basswork",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "author": "Brent Jackson",
   "license": "MIT",
+  "bin": {
+    "basswork": "cli.js"
+  },
   "dependencies": {
     "autoprefixer": "^3.1.0",
+    "minimist": "^1.1.0",
     "rework": "^1.0.1",
-    "rework-npm": "^1.0.0",
-    "rework-custom-media": "^0.2.0",
-    "rework-vars": "^3.1.1",
     "rework-calc": "^1.1.0",
-    "rework-plugin-colors": "^1.0.3"
+    "rework-custom-media": "^0.2.0",
+    "rework-npm": "^1.0.0",
+    "rework-plugin-colors": "^1.0.3",
+    "rework-vars": "^3.1.1"
   },
   "repository": {
     "type": "git",
