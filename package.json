@@ -6,6 +6,9 @@
   "bin": {
     "basswork": "bin/basswork.js"
   },
+  "scripts": {
+    "test": "node test"
+  },
   "dependencies": {
     "autoprefixer": "^3.1.0",
     "minimist": "^1.1.0",
@@ -14,7 +17,8 @@
     "rework-custom-media": "^0.2.0",
     "rework-npm": "^1.0.0",
     "rework-plugin-colors": "^1.0.3",
-    "rework-vars": "^3.1.1"
+    "rework-vars": "^3.1.1",
+    "rework-namespace": "^0.3.0"
   },
   "repository": {
     "type": "git",
