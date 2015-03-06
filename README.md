@@ -30,6 +30,15 @@ var css = basswork(src);
 fs.writeFileSync('./css/base.css', css);
 ```
 
+#### Options
+
+Pass [Rework options](https://github.com/reworkcss/css#api) as the second argument, and [Rework stringify options](https://github.com/reworkcss/css#cssstringifyobject-options) as the third argument.
+Basswork also includes a `namespace` option to prefix styles with a string followed by a hyphen.
+
+```javascript
+var css = basswork(src, { namespace: 'u' }, { compress: true });
+```
+
 ### Command Line
 
 ```sh
