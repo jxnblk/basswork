@@ -16,7 +16,8 @@ var reworkCalc = require('rework-calc');
 var reworkMedia = require('rework-custom-media');
 var reworkNPM = require('rework-npm');
 var reworkVars = require('rework-vars');
-var reworkColors = require('rework-plugin-colors');
+var reworkColor = require('rework-color-function');
+var reworkPluginColors = require('rework-plugin-colors');
 var namespace = require('rework-namespace');
 var autoprefixer = require('autoprefixer');
 
@@ -30,7 +31,8 @@ module.exports = function(src, options, toStringOptions) {
     .use(reworkVars())
     .use(reworkMedia())
     .use(reworkCalc)
-    .use(reworkColors())
+    .use(reworkColor)
+    .use(reworkPluginColors()) // For legacy support
     .use(namespace(options.namespace, options.namespaceOptions))
     .toString(toStringOptions);
 
