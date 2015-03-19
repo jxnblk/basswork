@@ -12,3 +12,6 @@ console.log(css);
 var css = basswork(src, { namespace: 'bass' });
 console.log('namespaced', css);
 
+var compressed = basswork(src, { namespace: 'u' }, { compress: true });
+console.log('compressed', compressed);
+
