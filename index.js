@@ -36,7 +36,14 @@ module.exports = function(src, options, toStringOptions) {
     .use(namespace(options.namespace, options.namespaceOptions))
     .toString(toStringOptions);
 
-  css = autoprefixer().process(css).css;
+  // Process css as object
+  if (options.sourcemapAsObject) {
+    css.code = autoprefixer().process(css.code).css;
+  }
+  // Process as string
+  else {
+    css = autoprefixer().process(css).css;
+  }
 
   return css;
 
