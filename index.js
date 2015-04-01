@@ -37,7 +37,7 @@ module.exports = function(src, options, toStringOptions) {
     .toString(toStringOptions);
 
   // Process css as object
-  if (options.sourcemapAsObject) {
+  if (toStringOptions.sourcemapAsObject) {
     css.code = autoprefixer().process(css.code).css;
   }
   // Process as string
